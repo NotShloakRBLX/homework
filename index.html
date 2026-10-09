@@ -58,7 +58,7 @@ input[type=datetime-local]{min-width:0;max-width:100%;font-size:16px}.assignment
 <dialog id="note-dialog" aria-labelledby="note-title"><div class="modal-inner"><div class="modal-head"><h2 id="note-title" tabindex="-1" autofocus>Add note</h2><button type="button" class="close" aria-label="Close add note">×</button></div><form id="note-form"><div class="field"><label for="note-text">Note</label><textarea id="note-text" rows="4" maxlength="4000" placeholder="Write your note"></textarea></div><button type="submit" class="blue submit" id="note-submit" disabled>Add note</button></form></div></dialog><dialog id="assignment-details-dialog" class="slide-dialog" aria-labelledby="assignment-details-title"><div class="modal-inner"><div class="modal-head"><h2 id="assignment-details-title" tabindex="-1" autofocus>Assignment details</h2><button type="button" class="close" aria-label="Close assignment details">×</button></div><div id="assignment-edit-fields"></div><p id="edit-error" role="alert" class="storage-message" hidden></p><div id="assignment-detail-actions" class="confirm-actions"></div></div></dialog>
 <dialog id="due-reminder-dialog" class="slide-dialog" aria-labelledby="due-reminder-title" aria-describedby="due-reminder-subtitle"><div class="modal-inner"><svg class="caution-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M20 9a4.6 4.6 0 0 1 8 0l15 26a4.6 4.6 0 0 1-4 7H9a4.6 4.6 0 0 1-4-7Z" fill="currentColor" fill-opacity=".1" stroke="currentColor" stroke-width="2"/><path d="M24 18v11m0 6v1" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><div class="modal-head"><h2 id="due-reminder-title" tabindex="-1" autofocus>Assignments due</h2></div><p id="due-reminder-subtitle">The following assignments are due within 24 hours:</p><ul id="due-reminder-list"></ul><div class="continue-wrap"><button type="button" class="blue" id="due-continue" disabled><span>Continue</span><span class="continue-shade" aria-hidden="true"></span></button></div></div></dialog><div id="assignment-toast" popover="manual" class="toast" role="status" aria-live="polite" aria-atomic="true"><span class="toast-check" aria-hidden="true">✓</span><span id="toast-text"></span></div><script>
 // Assets live beside index.html. Keep the supplied enginerring.png spelling.
-const symbols=[['math.png','Math','∑'],['health.png','Health','♡'],['art.png','Art','✎'],['science.png','Science','⚗'],['enginerring.png','Engineering','⚙'],['python.png','Python','⌘'],['world.png','World','◎'],['pencil.png','Pencil','✐']];
+const symbols=[['math.png','Math','∑'],['health.png','Health','♡'],['art.png','Art','✎'],['science.png','Science','⚗'],['enginerring.png','Engineering','⚙'],['python.png','Python','⌘'],['world.png','World','◎'],['pencil.png','Pencil','✐'],['car.png','Car','🚗']];
 const symbolRow=document.querySelector('.symbols');
 let selectedSymbol=null;
 function validateCourse(){document.querySelector('#course-submit').disabled=!(document.querySelector('#course-name').value.trim()&&selectedSymbol);}
@@ -149,3 +149,7 @@ checkDailyReminder();
 </script>
 </body>
 </html>
+
+
+
+
